@@ -1,0 +1,86 @@
+<!-- Задача 3.
+
+Во продолжение е даден следниот html документ кој што во пребарувачот прикажува семафор: -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" />
+    <title>Traffic Light</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .traffic-light {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            border: 3px solid black;
+            border-radius: 24px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            background: linear-gradient(to bottom, #666, #444);
+        }
+
+        .light {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 10px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="traffic-light">
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+    </div>
+
+    <!-- Ваша задача е да напишете javaScript код кој што ќе го овозможи следново:
+
+- Кога корисникот ќе го притисне копчето „r“, првиот круг треба да стане црвен.
+- Ако корисникот го притисне копчето „o“, вториот круг треба да се смени во портокалова боја.
+- Ако корисникот го притисне копчето „g“, последниот круг треба да стане зелен. -->
+    <script>
+        const redLight = document.getElementsByClassName("light")[0]
+        const yellowLight = document.getElementsByClassName("light")[1]
+        const greenLight = document.getElementsByClassName("light")[2]
+
+        function pressingColors(event) {
+            switch (event.key) {
+                case "r":
+                    redLight.style.backgroundColor = "red"
+                    yellowLight.style.backgroundColor = "gray"
+                    greenLight.style.backgroundColor = "gray"
+                    break;
+                case "y":
+                    redLight.style.backgroundColor = "gray"
+                    yellowLight.style.backgroundColor = "yellow"
+                    greenLight.style.backgroundColor = "gray"
+                    break;
+                case "g":
+                    redLight.style.backgroundColor = "gray"
+                    yellowLight.style.backgroundColor = "gray"
+                    greenLight.style.backgroundColor = "lightgreen"
+                    break;
+                default:
+                    break
+            }
+        }
+        document.addEventListener("keydown", pressingColors)
+
+
+    </script>
+</body>
+
+</html>

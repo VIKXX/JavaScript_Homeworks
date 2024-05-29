@@ -1,0 +1,74 @@
+<!-- Задача 1. Во продолжение е даден следниот HTML документ: -->
+
+<!-- Ваша задача ќе биде да поставите event listeners на трите квадрати такашто кога ќе се кликне на некој од нив, пребарувачот да покаже порака пр. “You clicked on the red box”.
+
+**Важно:** На клик, треба да се тригерира само една порака. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Prevention Exercise</title>
+    <style>
+        #red-box {
+            width: 400px;
+            height: 400px;
+            background-color: red;
+            position: relative;
+        }
+
+        #green-box {
+            width: 300px;
+            height: 300px;
+            background-color: green;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #blue-box {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="red-box">
+        <div id="green-box">
+            <div id="blue-box"></div>
+        </div>
+    </div>
+    <script>
+
+        const clickRed = document.getElementById("red-box")
+        clickRed.addEventListener("click", (event) => {
+            alert("You clicked on the red box!!!!")
+            event.stopPropagation()
+        })
+
+
+        const clickGreen = document.getElementById("green-box")
+        clickGreen.addEventListener("click", (event) => {
+            alert("You clicked on the green box!!!")
+            event.stopPropagation()
+        })
+
+
+        const clickBlue = document.getElementById("blue-box")
+        clickBlue.addEventListener("click", (event) => {
+            alert("You are clicked on the blue box")
+            event.stopPropagation()
+        })
+    </script>
+</body>
+
+</html>
