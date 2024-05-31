@@ -1,3 +1,8 @@
-# JavaScript_Homeworks
-# JavaScript_Homeworks
-# JavaScript_Homeworks
+# 01_Homework_01_Viktor_Ilieski
+# 02_Homework_02_Viktor_Ilieski
+# 03_Homework_03_Viktor_Ilieski
+# 04_Homework_04_Viktor_Ilieski
+# 05_Homework_05_Viktor_Ilieski
+# 06_Homework_06_Viktor_Ilieski
+# 07_Homework_07_Viktor_Ilieski
+# 08_Homework_08_Viktor_ilieski
