@@ -22,8 +22,6 @@ const fetchUserData = async () => {
                 const profileCharacter = document.createElement("div");
                 profileCharacter.classList.add("profile-character");
 
-
-
                 const imgCharacter = document.createElement("img");
                 imgCharacter.src = result.image;
                 profileCharacter.appendChild(imgCharacter);
@@ -42,6 +40,10 @@ const fetchUserData = async () => {
 
                 if (statusCharacter.textContent === "Alive") {
                     statusCharacter.classList.add("alive-character");
+                } else if (statusCharacter.textContent === "Dead") {
+                    statusCharacter.classList.add("dead-character");
+                } else {
+                    statusCharacter.classList.add("unknown-character");
                 }
 
                 const numberEpisodesCharacter = document.createElement("p");

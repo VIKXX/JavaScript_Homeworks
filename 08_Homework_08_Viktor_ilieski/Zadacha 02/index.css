@@ -10,6 +10,14 @@ body {
     color: green;
 }
 
+.dead-character {
+    color: red;
+}
+
+.unknown-character {
+    color: gray;
+}
+
 .character-group {
     display: flex;
     flex-direction: row;
