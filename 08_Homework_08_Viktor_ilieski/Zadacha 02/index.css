@@ -1,0 +1,21 @@
+body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.alive-character {
+    color: green;
+}
+
+.character-group {
+    display: flex;
+    flex-direction: row;
+}
+
+
+img {
+    width: 50%;
+}

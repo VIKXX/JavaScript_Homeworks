@@ -1,0 +1,21 @@
+#name-container>p {
+    width: 250px;
+    background-color: lightblue;
+}
+
+#phone-container>p {
+    width: 250px;
+    background-color: lightgreen;
+    text-decoration: underline;
+}
+
+#company-name-container>p {
+    width: 250px;
+    background-color: lightpink;
+}
+
+.user-data-container {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
